@@ -1,0 +1,150 @@
+/* 読書リストのスタイル */
+.reading-list-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.reading-list-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reading-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+.reading-list-table th,
+.reading-list-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.reading-list-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.reading-list-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.content-cell {
+  max-width: 200px;
+}
+
+.action-cell {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ボタンスタイル */
+.new-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.show-button,
+.edit-button,
+.delete-button {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+}
+
+.show-button {
+  background-color: #17a2b8;
+}
+
+.edit-button {
+  background-color: #28a745;
+}
+
+.delete-button {
+  background-color: #dc3545;
+}
+
+
+/* ステータスバッジのスタイル */
+.status-cell {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: white;
+}
+
+.status-badge.reading {
+  background-color: #17a2b8;  /* 青系 */
+}
+
+.status-badge.completed {
+  background-color: #28a745;  /* 緑系 */
+}
+
+.status-badge.suspended {
+  background-color: #dc3545;  /* 赤系 */
+}
+
+/* ホバー効果 */
+.new-button:hover,
+.show-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}
+
+/* コメントセクションのスタイル */
+.comments-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.page-number {
+  font-weight: bold;
+  color: #666;
+}
+
+.new-comment-form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.delete-comment {
+  color: #dc3545;
+  text-decoration: none;
+  font-size: 0.9em;
+}

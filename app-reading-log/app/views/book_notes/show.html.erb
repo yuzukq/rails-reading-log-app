@@ -1,0 +1,52 @@
+<div class="book-detail">
+  <h1><%= @book_note.title %></h1>
+  
+  <div class="book-info">
+    <p><strong>著者:</strong> <%= @book_note.author %></p>
+    <p><strong>読書状況:</strong> <%= @book_note.status %></p>
+    <p><strong>開始日:</strong> <%= @book_note.begin_date %></p>
+    <p><strong>終了日:</strong> <%= @book_note.end_date %></p>
+    <p><strong>感想:</strong> <%= @book_note.content %></p>
+  </div>
+
+  <div class="comments-section">
+    <h2>読中感想メモ</h2>
+    
+    <!-- コメント一覧 -->
+    <div class="comments-list">
+      <% @book_note.comments.order(page: :asc).each do |comment| %>
+        <div class="comment">
+          <p class="page-number">P.<%= comment.page %></p>
+          <p class="impression"><%= comment.impression %></p>
+          <%= link_to "削除", book_note_comment_path(@book_note, comment), 
+              method: :delete,
+              data: { turbo_confirm: "本当に削除しますか？" },
+              class: "delete-comment" %>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- 新規コメントフォーム -->
+    <div class="new-comment-form">
+      <h3>新規メモ追加</h3>
+      <%= form_with(model: [@book_note, @book_note.comments.build]) do |f| %>
+        <div class="field">
+          <%= f.label :page, "当該ページ" %>
+          <%= f.number_field :page, min: 0 %>
+        </div>
+
+        <div class="field">
+          <%= f.label :impression, "読中感想メモ" %>
+          <%= f.text_area :impression %>
+        </div>
+
+        <%= f.submit "追加", class: "submit-button" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= link_to "更新", edit_book_note_path(@book_note), class: "edit-button" %>
+    <%= link_to "トップへ", book_notes_path, class: "back-button" %>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module BooknotesHelper
+end

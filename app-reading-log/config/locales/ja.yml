@@ -1,0 +1,7 @@
+ja:
+  enums:
+    book_note:
+      status:
+        reading: "読書中"
+        completed: "完了"
+        suspended: "中断"

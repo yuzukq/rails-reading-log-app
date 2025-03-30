@@ -1,0 +1,42 @@
+<div class="reading-list-container">
+  <h1>Reading List</h1>
+
+  <%= link_to "新規作成", new_book_note_path, class: "new-button" %>
+
+  <table class="reading-list-table">
+    <thead>
+      <tr>
+        <th>タイトル</th>
+        <th>読書状況</th>  
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>読了感想</th>
+        <th>アクション</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @book_notes.each do |book_note| %>
+        <tr>
+          <td><%= book_note.title %></td>
+          <td class="status-cell">  
+            <span class="status-badge <%= book_note.status %>">
+              <%= t("enums.book_note.status.#{book_note.status}") %>
+            </span>
+          </td>
+          <td><%= book_note.begin_date&.strftime("%-m/%-d") %></td>
+          <td><%= book_note.end_date&.strftime("%-m/%-d") %></td>
+          <td class="content-cell"><%= truncate(book_note.content, length: 30) %></td>
+          <td class="action-cell">
+            <%= link_to "読中コメント", book_note_path(book_note), class: "show-button" %>
+            <%= link_to "編集", edit_book_note_path(book_note), class: "edit-button" %>
+            <%= link_to "削除", book_note_path(book_note), 
+                data: { turbo_method: 'delete', 
+              turbo_confirm: '本当に削除しますか?'},
+              class: 'action-link delete-button' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
