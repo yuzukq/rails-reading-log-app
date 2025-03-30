@@ -1,0 +1,49 @@
+FROM ubuntu:latest
+
+# 必要なパッケージのインストール
+RUN apt-get update && apt-get install -y \
+  curl \
+  gnupg2 \
+  dirmngr \
+  git \
+  build-essential \
+  libssl-dev \
+  libreadline-dev \
+  zlib1g-dev \
+  autoconf \
+  bison \
+  libyaml-dev \
+  libncurses5-dev \
+  libffi-dev \
+  libgdbm-dev \
+  tzdata
+
+# RVMのGPGキーを追加
+RUN gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+# RVMのインストール
+RUN curl -sSL https://get.rvm.io | bash -s stable
+
+# シェルをbashに設定
+SHELL ["/bin/bash", "-c"]
+
+# gemrcの設定（ドキュメントをインストールしない）
+RUN echo "gem: --no-document" >> ~/.gemrc
+
+# RVMとRuby、Railsのインストール
+RUN source /etc/profile.d/rvm.sh && \
+  rvm install 3.3.6 && \
+  rvm use 3.3.6 --default && \
+  gem install rails -v '8.0.2' -N
+
+# 環境変数の設定
+ENV PATH=/usr/local/rvm/bin:/usr/local/rvm/rubies/ruby-3.3.6/bin:$PATH
+
+# タイムゾーンの設定
+ENV TZ=Asia/Tokyo
+
+# 作業ディレクトリの設定
+WORKDIR /app
+
+# デフォルトのコマンドシェルを設定
+CMD ["/bin/bash"]
