@@ -148,3 +148,281 @@
   text-decoration: none;
   font-size: 0.9em;
 }
+
+/* 本の詳細ページのスタイル */
+.book-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-detail h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.book-info {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.book-info p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.book-detail .comments-section {
+  margin-top: 2rem;
+}
+
+.book-detail h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.book-detail .comments-list {
+  margin-bottom: 2rem;
+}
+
+.book-detail .comment {
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.book-detail .page-number {
+  color: #3498db;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.book-detail .impression {
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.book-detail .delete-comment {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #dc3545;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.book-detail .delete-comment:hover {
+  text-decoration: underline;
+}
+
+.book-detail .new-comment-form {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.book-detail h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.book-detail .field {
+  margin-bottom: 1rem;
+}
+
+.book-detail .field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.book-detail .field input[type="number"],
+.book-detail .field textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.book-detail .field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.book-detail .submit-button {
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-detail .submit-button:hover {
+  background-color: #2980b9;
+}
+
+.book-detail .actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.book-detail .edit-button,
+.book-detail .back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.book-detail .edit-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.book-detail .edit-button:hover {
+  background-color: #27ae60;
+}
+
+.book-detail .back-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.book-detail .back-button:hover {
+  background-color: #7f8c8d;
+}
+
+/* フォームのスタイル */
+.form-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-container .field {
+  margin-bottom: 1.5rem;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-container textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-container select {
+  background-color: white;
+}
+
+.form-container .actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.form-container .submit-button {
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.form-container .submit-button:hover {
+  background-color: #2980b9;
+}
+
+.form-container .back-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #95a5a6;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.form-container .back-link:hover {
+  background-color: #7f8c8d;
+}
+
+/* エラーメッセージのスタイル */
+.error-messages {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.error-messages h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-messages ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.field_with_errors input,
+.field_with_errors select,
+.field_with_errors textarea {
+  border-color: #dc3545;
+}
+
+.field_with_errors label {
+  color: #dc3545;
+}
+
+/* ページタイトルの共通スタイル */
+.page-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}

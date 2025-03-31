@@ -1,37 +1,49 @@
-<%= form_with model: @book_note do |form| %>
-  <div>
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
-  </div>
+<div class="form-container">
+  <%= form_with model: @book_note do |form| %>
+    <% if @book_note.errors.any? %>
+      <div class="error-messages">
+        <h2><%= pluralize(@book_note.errors.count, "error") %> prohibited this book note from being saved:</h2>
+        <ul>
+          <% @book_note.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <div>
-    <%= form.label :author, "著者" %>
-    <%= form.text_field :author %>
-  </div>
+    <div class="field">
+      <%= form.label :title, "タイトル" %>
+      <%= form.text_field :title %>
+    </div>
 
-  <div>
-    <%= form.label :status, "読書状況" %>
-    <%= form.select :status, BookNote.statuses.keys.map { |k| [I18n.t("enums.book_note.status.#{k}"), k] } %>
-  </div>
+    <div class="field">
+      <%= form.label :author, "著者" %>
+      <%= form.text_field :author %>
+    </div>
 
-  <div>
-    <%= form.label :begin_date, "開始日" %>
-    <%= form.date_field :begin_date %>
-  </div>
+    <div class="field">
+      <%= form.label :status, "読書状況" %>
+      <%= form.select :status, BookNote.statuses.keys.map { |k| [I18n.t("enums.book_note.status.#{k}"), k] } %>
+    </div>
 
-  <div>
-    <%= form.label :end_date, "終了日" %>
-    <%= form.date_field :end_date %>
-  </div>
+    <div class="field">
+      <%= form.label :begin_date, "読書開始日" %>
+      <%= form.date_field :begin_date %>
+    </div>
 
-  <div>
-    <%= form.label :content, "感想" %>
-    <%= form.text_area :content %>
-  </div>
+    <div class="field">
+      <%= form.label :end_date, "読書完了日" %>
+      <%= form.date_field :end_date %>
+    </div>
 
-  <div>
-    <%= form.submit "保存" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= form.label :content, "読了感想" %>
+      <%= form.text_area :content %>
+    </div>
 
-<%= link_to "トップへ", book_notes_path %>
+    <div class="actions">
+      <%= form.submit "保存", class: "submit-button" %>
+      <%= link_to "トップへ", book_notes_path, class: "back-link" %>
+    </div>
+  <% end %>
+</div>
