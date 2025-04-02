@@ -3,6 +3,9 @@ source "https://rubygems.org"
 # 日本語のロケールを使用
 gem 'enum_help'
 
+# ログイン機能
+gem 'devise'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]

@@ -5,3 +5,85 @@ ja:
         reading: "読書中"
         completed: "完了"
         suspended: "中断"
+  activerecord:
+    models:
+      book_note: "読書メモ"
+      comment: "コメント"
+    attributes:
+      book_note:
+        title: "タイトル"
+        author: "著者"
+        status: "ステータス"
+        impression: "感想"
+      comment:
+        page_number: "ページ数"
+        impression: "感想"
+    errors:
+      models:
+        book_note:
+          attributes:
+            title:
+              blank: "タイトルを入力してください"
+            author:
+              blank: "著者を入力してください"
+            status:
+              blank: "ステータスを選択してください"
+            impression:
+              blank: "感想を入力してください"
+        comment:
+          attributes:
+            page_number:
+              blank: "ページ数を入力してください"
+            impression:
+              blank: "感想を入力してください"
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "他のレコードが依存しているため削除できません"
+          has_many: "他のレコードが依存しているため削除できません"
+  errors:
+    messages:
+      blank: "を入力してください"
+      invalid: "は不正な値です"
+      confirmation: "が一致しません"
+      accepted: "を受諾してください"
+      empty: "を入力してください"
+      too_short: "は%{count}文字以上で入力してください"
+      too_long: "は%{count}文字以下で入力してください"
+      wrong_length: "は%{count}文字で入力してください"
+      not_a_number: "は数値で入力してください"
+      greater_than: "は%{count}より大きい値にしてください"
+      greater_than_or_equal_to: "は%{count}以上の値にしてください"
+      equal_to: "は%{count}に等しい値にしてください"
+      less_than: "は%{count}より小さい値にしてください"
+      less_than_or_equal_to: "は%{count}以下の値にしてください"
+      odd: "は奇数にしてください"
+      even: "は偶数にしてください"
+      inclusion: "は一覧にありません"
+      exclusion: "は一覧に含まれています"
+      format: "は不正な値です"
+      uniqueness: "はすでに存在します"
+  activerecord:
+    errors:
+      messages:
+        blank: "を入力してください"
+        invalid: "は不正な値です"
+        confirmation: "が一致しません"
+        accepted: "を受諾してください"
+        empty: "を入力してください"
+        too_short: "は%{count}文字以上で入力してください"
+        too_long: "は%{count}文字以下で入力してください"
+        wrong_length: "は%{count}文字で入力してください"
+        not_a_number: "は数値で入力してください"
+        greater_than: "は%{count}より大きい値にしてください"
+        greater_than_or_equal_to: "は%{count}以上の値にしてください"
+        equal_to: "は%{count}に等しい値にしてください"
+        less_than: "は%{count}より小さい値にしてください"
+        less_than_or_equal_to: "は%{count}以下の値にしてください"
+        odd: "は奇数にしてください"
+        even: "は偶数にしてください"
+        inclusion: "は一覧にありません"
+        exclusion: "は一覧に含まれています"
+        format: "は不正な値です"
+        uniqueness: "はすでに存在します"

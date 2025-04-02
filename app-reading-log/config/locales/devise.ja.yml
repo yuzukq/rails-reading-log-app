@@ -1,0 +1,39 @@
+ja:
+  devise:
+    failure:
+      user:
+        unauthenticated: "ログインまたは登録が必要です"
+      unauthenticated: "ログインまたは登録が必要です"
+    sessions:
+      user:
+        signed_in: "ログインしました"
+        signed_out: "ログアウトしました"
+        already_signed_out: "既にログアウトしています"
+    registrations:
+      user:
+        signed_up: "登録が完了しました"
+        updated: "アカウント情報を更新しました"
+        destroyed: "アカウントを削除しました"
+    passwords:
+      no_token: "このページにはアクセスできません。パスワードリセットメールのリンクからアクセスしてください"
+      send_instructions: "パスワードの再設定方法を数分以内にメールでご連絡します"
+      updated: "パスワードを変更しました"
+      sent: "パスワードの再設定方法を数分以内にメールでご連絡します"
+    unlocks:
+      send_instructions: "アカウントのロック解除方法を数分以内にメールでご連絡します"
+      unlocked: "アカウントのロックを解除しました"
+      send_paranoid_instructions: "アカウントが存在する場合、数分以内にアカウントのロック解除方法をメールでご連絡します"
+    omniauth_callbacks:
+      failure: "%{kind} からの認証に失敗しました。理由：「%{reason}」"
+      success: "%{kind} からの認証に成功しました"
+    mailer:
+      confirmation_instructions:
+        subject: "認証メール"
+      reset_password_instructions:
+        subject: "パスワードリセット方法のご案内"
+      unlock_instructions:
+        subject: "アカウントロック解除方法のご案内"
+      email_changed:
+        subject: "メールアドレス変更のお知らせ"
+      password_change:
+        subject: "パスワード変更のお知らせ" 

@@ -11,12 +11,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :book_notes
-  root "book_notes#index"
 
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
+  root "book_notes#index"
   resources :book_notes do
     resources :comments, only: [:create, :destroy]
   end
-  
-  
 end

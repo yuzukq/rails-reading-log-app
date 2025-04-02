@@ -1,4 +1,7 @@
 class BookNote < ApplicationRecord
+  # ユーザーとの関連付け
+  belongs_to :user
+
   # 読書状況の定義
   enum :status, {  
     reading: 0,    # 読書中

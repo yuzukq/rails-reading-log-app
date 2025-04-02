@@ -8,6 +8,7 @@
     <thead>
       <tr>
         <th>タイトル</th>
+        <th>作成者</th>
         <th>読書状況</th>  
         <th>開始日</th>
         <th>終了日</th>
@@ -20,6 +21,7 @@
       <% @book_notes.each do |book_note| %>
         <tr>
           <td><%= book_note.title %></td>
+          <td><%= book_note.user.user_name %></td>
           <td class="status-cell">  
             <span class="status-badge <%= book_note.status %>">
               <%= t("enums.book_note.status.#{book_note.status}") %>
@@ -30,11 +32,13 @@
           <td class="content-cell"><%= truncate(book_note.content, length: 30) %></td>
           <td class="action-cell">
             <%= link_to "読中コメント", book_note_path(book_note), class: "show-button" %>
-            <%= link_to "編集", edit_book_note_path(book_note), class: "edit-button" %>
-            <%= link_to "削除", book_note_path(book_note), 
-                data: { turbo_method: 'delete', 
-              turbo_confirm: '本当に削除しますか?'},
-              class: 'action-link delete-button' %>
+            <% if book_note.user == current_user %>
+              <%= link_to "編集", edit_book_note_path(book_note), class: "edit-button" %>
+              <%= link_to "削除", book_note_path(book_note), 
+                  data: { turbo_method: 'delete', 
+                    turbo_confirm: '本当に削除しますか?'},
+                    class: 'action-link delete-button' %>
+            <% end %>
           </td>
         </tr>
       <% end %>
