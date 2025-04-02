@@ -20,4 +20,9 @@ Rails.application.routes.draw do
   resources :book_notes do
     resources :comments, only: [:create, :destroy]
   end
+
+  # アプリの説明と自己紹介ページ
+  get 'about', to: 'pages#about'
+  # 開発者プロフィールページ
+  get 'profile', to: 'pages#profile'
 end
