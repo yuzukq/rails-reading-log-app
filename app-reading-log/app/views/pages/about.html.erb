@@ -1,23 +1,35 @@
-<div class="bg_pattern Lines_v3"></div>
+<div class="bg_pattern Lines"></div>
 <div class="reading-list-container">
   <h1 class="page-title">アプリの説明と自己紹介</h1>
 
   <div class="content-container">
     <section class="info-section">
-      <h2>読書メモアプリについて</h2>
-      <p>このアプリでは、読んだ本のメモを簡単に管理できます。</p>
-      <ul>
-        <li>本のタイトル、著者、感想を記録</li>
-        <li>読書の進捗状況を管理（読書中、完了、中断）</li>
-        <li>ページごとの感想をコメントとして記録</li>
-      </ul>
+     <h2>開発者について</h2>
+     <div class="profile-container">
+       <%= image_tag "profile-icon.png", class: "profile-icon", alt: "プロフィールアイコン" %>
+       <div class="profile-text">
+         <p>こんにちは、本アプリの製作者 Yuzu です。</p>
+         <p>大学ではコンピュータサイエンスを学んでおり、趣味で VR コンテンツの制作や VRSNS でのコミュニケーションを楽しんでいます。最近は読書にもハマっていて、本を読むたびに感じたことを言語化して書き留めておきたいと思うようになりました。</p>
+         
+         <h3>開発経緯</h3>
+         <p>将来どの分野に進むべきかを考える中で、バックエンドとフロントエンドの両方を経験してみたいと思い、Ruby on Rails を使ってこのアプリを開発しました。</p>
+         <p>また、読書をする機会が増えるにつれて、その瞬間の感想を記録することの重要性を感じるようになりました。他者の感想を見聞きするよりも前に、その時感じた自分の率直な気持ちを残しておきたい、そしてそれを気軽に共有できたら面白いのではないか、という思いがこのアプリの原点です。</p>
+         <p>このアプリを通じて、読書の楽しみをより深めると同時に、Web 開発の経験を積みながら、自分の進む道を探っていきたいと考えています。</p>
+         
+         <h3>技術スタック</h3>
+         <p>Ruby on Rails, PostgreSQL, HTML/CSS, JavaScript</p>
+         
+         <p>ご意見・ご要望がありましたら、お気軽にお問い合わせください。</p>
+       </div>
+     </div>
     </section>
 
     <section class="info-section">
-      <h2>主な機能</h2>
+      <h2>読書メモアプリについて</h2>
+      <p>このアプリでは、読んだ本のメモを簡単に管理できます。</p>
       <ul>
-        <li><strong>読書メモの作成：</strong> 本の情報と感想を記録</li>
-        <li><strong>進捗管理：</strong> 読書の状態を更新</li>
+        <li><strong>読書メモの作成：</strong> 本のタイトル、著者、感想を記録</li>
+        <li><strong>進捗管理：</strong> 読書の状態（読書中、完了、中断）を更新</li>
         <li><strong>コメント機能：</strong> ページごとの感想を記録</li>
         <li><strong>一覧表示：</strong> すべての読書メモを確認</li>
       </ul>
@@ -33,13 +45,7 @@
       </ul>
     </section>
 
-    <section class="info-section">
-      <h2>開発者について</h2>
-      <p>このアプリは、読書好きの開発者によって作成されました。</p>
-      <p>読書の記録を簡単に管理できるツールが欲しいという思いから、このアプリを開発しました。</p>
-      <p>技術スタック：Ruby on Rails, PostgreSQL, HTML/CSS, JavaScript</p>
-      <p>ご意見・ご要望がありましたら、お気軽にお問い合わせください。</p>
-    </section>
+    
 
     <div class="actions">
       <%= link_to "トップページへ戻る", root_path, class: "back-link" %>

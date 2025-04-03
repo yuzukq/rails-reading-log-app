@@ -6,11 +6,26 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #f2fcff;
+  background: linear-gradient(0deg,#e8fcff,#f7fdff,#ffffff,#d7f8ff);
+  background-size: 240% 240%;
+  animation: gradient-animation 30s ease infinite;
   opacity: 0.4;
   z-index: -1;
 }
-.Lines_v3 {
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Lines {
   background-size: 40px 40px;
   background-image:  repeating-linear-gradient(0deg, rgb(88, 99, 104), rgb(88, 99, 104) 2px, #dff8f1 2px, #dff8f1);
 }
@@ -532,3 +547,71 @@
   25%, 75% { transform: translateX(-5px); }
   50% { transform: translateX(5px); }
 }
+
+/* アプリの説明と自己紹介ページのスタイル */
+.info-section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.info-section p {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.info-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-section li {
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.info-section strong {
+  color: #2c3e50;
+}
+
+.info-section h3 {
+  color: #2c3e50;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.2rem;
+  border-left: 4px solid #3498db;
+  padding-left: 0.5rem;
+}
+
+/* プロフィールコンテナのスタイル */
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.profile-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-text {
+  flex: 1;
+}
+
+
