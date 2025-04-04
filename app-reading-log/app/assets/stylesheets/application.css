@@ -448,19 +448,41 @@
   color: #2c3e50;
   margin-bottom: 2rem;
   font-size: 2rem;
-  border-bottom: 2px solid #3498db;
+  border-bottom: 2px solid #69A2B6;
   padding-bottom: 0.5rem;
+}
+
+/* ヘッダースタイル */
+.header-container {
+  width: 100%;
+  font-family: 'Noto Serif JP', sans-serif;
+  border-bottom: 2px solid #6a9dbc;
+  background-color: #f9f0e1;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-display {
+  /* font-family: 'Courier New', monospace; */
+  font-size: 1rem;
+  color: #2c3e50;
 }
 
 /* ユーザーナビゲーション */
 .user-nav {
-  background-color: #f8f9fa;
-  padding: 10px 20px;
+  background-color: transparent;
+  padding: 0;
+  border-bottom: none;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   gap: 15px;
-  border-bottom: 1px solid #dee2e6;
 }
 
 .user-info {
@@ -470,18 +492,19 @@
 
 .login-button,
 .logout-button {
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 4px;
   text-decoration: none;
   color: white;
-  background-color: #007bff;
+  background-color: #3498db;
   border: none;
   cursor: pointer;
-}
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 
-.login-button:hover,
-.logout-button:hover {
-  background-color: #0056b3;
+  &:hover {
+    background-color: #2980b9;
+  }
 }
 
 /* 通知メッセージ */
