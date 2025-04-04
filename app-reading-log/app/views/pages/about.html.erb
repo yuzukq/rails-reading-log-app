@@ -6,7 +6,19 @@
     <section class="info-section">
      <h2>開発者について</h2>
      <div class="profile-container">
-       <%= image_tag "profile-icon.png", class: "profile-icon", alt: "プロフィールアイコン" %>
+       <div class="profile-left">
+         <%= image_tag "profile-icon.png", class: "profile-icon", alt: "プロフィールアイコン" %>
+         <div class="sns-buttons">
+           <a href="" class="sns-button" target="_blank">
+             <%= image_tag "github-icon.png", alt: "GitHub" %>
+             GitHub
+           </a>
+           <a href="mailto:c1.101Yuzu@gmail.com" class="sns-button">
+             <%= image_tag "mail-icon.png", alt: "Email" %>
+             Email
+           </a>
+         </div>
+       </div>
        <div class="profile-text">
          <p>こんにちは、本アプリの製作者 Yuzu です。</p>
          <p>大学ではコンピュータサイエンスを学んでおり、趣味で VR コンテンツの制作や VRSNS でのコミュニケーションを楽しんでいます。最近は読書にもハマっていて、本を読むたびに感じたことを言語化して書き留めておきたいと思うようになりました。</p>
@@ -47,8 +59,8 @@
 
     
 
-    <div class="actions">
-      <%= link_to "トップページへ戻る", root_path, class: "back-link" %>
+    <div>
+      <%= link_to "トップページへ戻る", root_path %>
     </div>
   </div>
 </div> 

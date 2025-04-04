@@ -6,30 +6,17 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(0deg,#e8fcff,#f7fdff,#ffffff,#d7f8ff);
+  background: white; 
   background-size: 240% 240%;
-  animation: gradient-animation 30s ease infinite;
   opacity: 0.4;
   z-index: -1;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .Lines {
   background-size: 40px 40px;
-  background-image:  repeating-linear-gradient(0deg, rgb(88, 99, 104), rgb(88, 99, 104) 2px, #dff8f1 2px, #dff8f1);
+  background-image:  repeating-linear-gradient(0deg, #d7e3d7, #b7c2ba 2px, #f9f0e1 2px, #fef2e2); /* 緯線上部，緯線下部，隙間上部， 隙間下部 */
 }
-
 
 /* 読書リストのスタイル */
 .reading-list-container {
@@ -548,6 +535,7 @@
   50% { transform: translateX(5px); }
 }
 
+
 /* アプリの説明と自己紹介ページのスタイル */
 .info-section {
   background-color: #fff;
@@ -602,12 +590,73 @@
   margin-top: 1rem;
 }
 
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 150px;
+}
+
 .profile-icon {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sns-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 100px;
+  margin-inline: auto;
+}
+
+.sns-button {
+  font-size: 1.2rem;
+  padding-block: .3em;
+  padding-inline: 1em;
+  border-radius: 5rem;
+  border: 1px solid;
+  background-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+
+  &:hover img{
+    animation: sns-button-hover .5s ease-in-out;
+  }
+
+  img {
+    width: 24px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+@keyframes sns-button-hover {
+  30% {
+    translate: 0 1em;
+    opacity: 0;
+  }
+  60% {
+    translate: 0 -1em;
+    opacity: 0;
+  }
 }
 
 .profile-text {
