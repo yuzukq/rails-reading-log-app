@@ -686,4 +686,15 @@
   flex: 1;
 }
 
+.sns-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.sns-button:hover .sns-icon {
+  transform: scale(1.1);
+}
+
 
