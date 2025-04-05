@@ -34,3 +34,6 @@
 /config/master.key
 
 /config/master.key
+
+# Ignore master key for decrypting credentials and more.
+/app-reading-log/config/master.key
