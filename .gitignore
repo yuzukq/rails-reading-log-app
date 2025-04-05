@@ -5,35 +5,30 @@
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
 # Ignore bundler config.
-/.bundle
+/app-reading-log/.bundle
 
 # Ignore all environment files.
-/.env*
+/app-reading-log/.env*
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/app-reading-log/log/*
+/app-reading-log/tmp/*
+!/app-reading-log/log/.keep
+!/app-reading-log/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/app-reading-log/tmp/pids/*
+!/app-reading-log/tmp/pids/
+!/app-reading-log/tmp/pids/.keep
 
 # Ignore storage (uploaded files in development and any SQLite databases).
-/storage/*
-!/storage/.keep
-/tmp/storage/*
-!/tmp/storage/
-!/tmp/storage/.keep
+/app-reading-log/storage/*
+!/app-reading-log/storage/.keep
+/app-reading-log/tmp/storage/*
+!/app-reading-log/tmp/storage/
+!/app-reading-log/tmp/storage/.keep
 
-/public/assets
-
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
-/config/master.key
+/app-reading-log/public/assets
 
 # Ignore master key for decrypting credentials and more.
 /app-reading-log/config/master.key
