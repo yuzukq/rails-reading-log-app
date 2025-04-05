@@ -1,0 +1,12 @@
+=> 
+[32m#<BookNote:0x00007fba40ed51f0[0m
+ id: [34m[1m1[0m,
+ title: [31m[1m"[0m[31mtest[0m[31m[1m"[0m,
+ author: [31m[1m"[0m[31mtest-author[0m[31m[1m"[0m,
+ status: [31m[1m"[0m[31mcompleted[0m[31m[1m"[0m,
+ begin_date: [31m[1m"[0m[31m2025-04-25[0m[31m[1m"[0m,
+ end_date: [31m[1m"[0m[31m2025-04-30[0m[31m[1m"[0m,
+ content: [31m[1m"[0m[31mdsadsadsad[0m[31m[1m"[0m,
+ created_at: [31m[1m"[0m[31m2025-04-05 08:11:27.093282000 +0000[0m[31m[1m"[0m,
+ updated_at: [31m[1m"[0m[31m2025-04-05 08:11:27.093282000 +0000[0m[31m[1m"[0m,
+ user_id: [34m[1m2[0m[32m>[0m
