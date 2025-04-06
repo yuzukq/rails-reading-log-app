@@ -14173,3 +14173,6 @@ Completed 200 OK in 704ms (Views: 16.6ms | ActiveRecord: 1.0ms (3 queries, 0 cac
   [1m[36mBookNote Load (0.6ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" ORDER BY "book_notes"."id" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1 /*application='AppReadingLog'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
