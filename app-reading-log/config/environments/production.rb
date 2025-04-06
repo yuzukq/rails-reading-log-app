@@ -89,4 +89,6 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   config.action_cable.mount_path = nil
+  # ActiveJobのアダプタを非同期（async）に変更
+  config.active_job.queue_adapter = :async
 end
