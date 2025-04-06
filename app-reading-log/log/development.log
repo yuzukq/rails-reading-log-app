@@ -14176,3 +14176,101 @@ Completed 200 OK in 704ms (Views: 16.6ms | ActiveRecord: 1.0ms (3 queries, 0 cac
   [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "book_notes" /*application='AppReadingLog'*/[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "book_notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "author" varchar NOT NULL, "status" integer DEFAULT 0 NOT NULL, "begin_date" date, "end_date" date, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE INDEX "index_book_notes_on_user_id" ON "book_notes" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "page" integer NOT NULL, "impression" text NOT NULL, "book_note_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_comments_on_book_note_id" ON "comments" ("book_note_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='AppReadingLog'*/[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_name" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='AppReadingLog'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_user_name" ON "users" ("user_name") /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[35mPRAGMA foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='AppReadingLog'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abook_notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "author" varchar NOT NULL, "status" integer DEFAULT 0 NOT NULL, "begin_date" date, "end_date" date, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "tindex_abook_notes_on_user_id" ON "abook_notes" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "abook_notes" ("id","title","author","status","begin_date","end_date","content","created_at","updated_at","user_id")
+                     SELECT "id","title","author","status","begin_date","end_date","content","created_at","updated_at","user_id" FROM "book_notes" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "book_notes" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "book_notes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "author" varchar NOT NULL, "status" integer DEFAULT 0 NOT NULL, "begin_date" date, "end_date" date, "content" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_ff611cf76a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_book_notes_on_user_id" ON "book_notes" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "book_notes" ("id","title","author","status","begin_date","end_date","content","created_at","updated_at","user_id")
+                     SELECT "id","title","author","status","begin_date","end_date","content","created_at","updated_at","user_id" FROM "abook_notes" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abook_notes" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[35mPRAGMA foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acomments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "page" integer NOT NULL, "impression" text NOT NULL, "book_note_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acomments_on_user_id" ON "acomments" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acomments_on_book_note_id" ON "acomments" ("book_note_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "acomments" ("id","page","impression","book_note_id","created_at","updated_at","user_id")
+                     SELECT "id","page","impression","book_note_id","created_at","updated_at","user_id" FROM "comments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "comments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "page" integer NOT NULL, "impression" text NOT NULL, "book_note_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_1071338ab6"
+FOREIGN KEY ("book_note_id")
+  REFERENCES "book_notes" ("id")
+) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_book_note_id" ON "comments" ("book_note_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("id","page","impression","book_note_id","created_at","updated_at","user_id")
+                     SELECT "id","page","impression","book_note_id","created_at","updated_at","user_id" FROM "acomments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "acomments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "acomments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "page" integer NOT NULL, "impression" text NOT NULL, "book_note_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_acomments_on_user_id" ON "acomments" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "tindex_acomments_on_book_note_id" ON "acomments" ("book_note_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "acomments" ("id","page","impression","book_note_id","created_at","updated_at","user_id")
+                     SELECT "id","page","impression","book_note_id","created_at","updated_at","user_id" FROM "comments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "comments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "page" integer NOT NULL, "impression" text NOT NULL, "book_note_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_1071338ab6"
+FOREIGN KEY ("book_note_id")
+  REFERENCES "book_notes" ("id")
+, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_comments_on_book_note_id" ON "comments" ("book_note_id") /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_comments_on_user_id" ON "comments" ("user_id") /*application='AppReadingLog'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "comments" ("id","page","impression","book_note_id","created_at","updated_at","user_id")
+                     SELECT "id","page","impression","book_note_id","created_at","updated_at","user_id" FROM "acomments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "acomments" /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='AppReadingLog'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='AppReadingLog'*/[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='AppReadingLog'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250402024204) /*application='AppReadingLog'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250402024119),
+(20250402022153),
+(20250330132127),
+(20250330055619); /*application='AppReadingLog'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-04-06 09:36:02.470442', '2025-04-06 09:36:02.470443') RETURNING "key" /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'cf006c97f3cecd26d4df12c3e13f4723a8cc5b90', '2025-04-06 09:36:02.480811', '2025-04-06 09:36:02.480813') RETURNING "key" /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
