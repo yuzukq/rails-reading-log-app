@@ -93,4 +93,7 @@ Rails.application.configure do
   config.action_cable.mount_path = nil
   # ActiveJobのアダプタを非同期（async）に変更
   config.active_job.queue_adapter = :async
+
+  config.hosts << "tsundoku-memo.net" # 独自ドメイン
+  config.hosts << "www.tsundoku-memo.net" # サブドメイン
 end
