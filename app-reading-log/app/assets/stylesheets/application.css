@@ -56,6 +56,29 @@
   background-color: #f5f5f5;
 }
 
+/* モバイル用 */
+@media screen and (max-width: 768px) {
+  .reading-list-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* 読了感想のセルを調整 */
+  .content-cell {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* 表示する行数 */
+    line-clamp: 1; /* 同上 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 300px; 
+  }
+
+}
+
 .content-cell {
   max-width: 200px;
 }
