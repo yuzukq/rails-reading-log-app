@@ -713,4 +713,17 @@
   .info-section h2 {
     font-size: 1.2rem;
   }
+
+  .sns-buttons {
+    margin-top: 0.5rem;
+    max-width: 90px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .sns-button {
+    font-size: 1rem;
+    padding-block: .2em;
+    padding-inline: .5em;
+  }
 }

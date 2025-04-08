@@ -14274,3 +14274,291 @@ FOREIGN KEY ("user_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='AppReadingLog'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+Started GET "/" for 172.17.0.1 at 2025-04-08 16:11:17 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (7.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 1831ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 12.5ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-08 16:11:21 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 173.6ms | GC: 6.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 307.2ms | GC: 25.8ms)
+Completed 200 OK in 1332ms (Views: 614.9ms | ActiveRecord: 52.8ms (0 queries, 0 cached) | GC: 40.8ms)
+
+
+Started GET "/assets/application-1c7638ea.css" for 172.17.0.1 at 2025-04-08 16:11:23 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/favicon-aaae21be.png" for 172.17.0.1 at 2025-04-08 16:11:23 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:11:27 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 40.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | GC: 0.0ms)
+Completed 200 OK in 572ms (Views: 48.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/github-icon-9d16b1e2.svg" for 172.17.0.1 at 2025-04-08 16:11:27 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/mail-icon-54c65bbf.svg" for 172.17.0.1 at 2025-04-08 16:11:27 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/assets/turbo.min-02fd5b81.js.map" for 172.17.0.1 at 2025-04-08 16:12:07 +0900
+Started GET "/assets/stimulus.min-2395e199.js.map" for 172.17.0.1 at 2025-04-08 16:12:07 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:35:48 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 19.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | GC: 0.0ms)
+Completed 200 OK in 651ms (Views: 40.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-99066da3.css" for 172.17.0.1 at 2025-04-08 16:35:49 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:37:18 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 11.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | GC: 0.0ms)
+Completed 200 OK in 700ms (Views: 30.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/assets/application-b911dcae.css" for 172.17.0.1 at 2025-04-08 16:37:19 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:39:22 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 12.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | GC: 0.0ms)
+Completed 200 OK in 625ms (Views: 28.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/assets/application-d0991c62.css" for 172.17.0.1 at 2025-04-08 16:39:23 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:40:24 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 13.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | GC: 0.0ms)
+Completed 200 OK in 708ms (Views: 37.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 14.7ms)
+
+
+Started GET "/assets/application-18b77472.css" for 172.17.0.1 at 2025-04-08 16:40:25 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:41:36 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | GC: 0.0ms)
+Completed 200 OK in 471ms (Views: 26.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/assets/application-3af0bd78.css" for 172.17.0.1 at 2025-04-08 16:41:37 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:46:03 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 12.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | GC: 0.0ms)
+Completed 200 OK in 516ms (Views: 32.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-b396dafb.css" for 172.17.0.1 at 2025-04-08 16:46:03 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.17.0.1 at 2025-04-08 16:58:12 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 4.0ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x00007ff2f5d0e9a0 /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 626ms (Views: 30.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-08 16:58:59 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+Processing by BookNotesController#index as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 3.8ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x00007f0acc5dd288 /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 1107ms (Views: 47.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.17.0.1 at 2025-04-08 16:59:01 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 172.17.0.1 at 2025-04-08 16:59:10 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 6.1ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x00007f0acc5dd288 /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 456ms (Views: 8.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-08 16:59:16 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 573ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-08 16:59:17 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 26.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 153.6ms | GC: 19.3ms)
+Completed 200 OK in 771ms (Views: 195.8ms | ActiveRecord: 97.3ms (0 queries, 0 cached) | GC: 19.3ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-08 16:59:20 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 11.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | GC: 0.0ms)
+Completed 200 OK in 549ms (Views: 33.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:04:34 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 2.5ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x00007f0acc5dd288 /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 590ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-08 17:04:52 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 683ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-08 17:04:56 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 664ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-08 17:04:57 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | GC: 0.0ms)
+Completed 200 OK in 574ms (Views: 26.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-fa370f5d.css" for 172.17.0.1 at 2025-04-08 17:04:58 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:05:00 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 12.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | GC: 0.0ms)
+Completed 200 OK in 644ms (Views: 21.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:07:24 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering public/406-unsupported-browser.html
+  Rendered public/406-unsupported-browser.html (Duration: 2.8ms | GC: 0.0ms)
+Filter chain halted as #<Proc:0x00007f0acc5dd288 /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/actionpack-8.0.2/lib/action_controller/metal/allow_browser.rb:58 (lambda)> rendered or redirected
+Completed 406 Not Acceptable in 612ms (Views: 6.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 34.9ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-08 17:07:33 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 535ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-08 17:07:34 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | GC: 0.0ms)
+Completed 200 OK in 542ms (Views: 35.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-1b219be9.css" for 172.17.0.1 at 2025-04-08 17:07:35 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:07:36 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 27.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | GC: 0.0ms)
+Completed 200 OK in 504ms (Views: 34.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:08:04 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 12.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | GC: 0.0ms)
+Completed 200 OK in 604ms (Views: 23.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-08 17:10:05 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 13.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | GC: 0.0ms)
+Completed 200 OK in 511ms (Views: 29.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-eb38abbe.css" for 172.17.0.1 at 2025-04-08 17:10:05 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/" for 172.17.0.1 at 2025-04-08 17:11:24 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 382ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-08 17:11:24 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 336ms (Views: 14.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
