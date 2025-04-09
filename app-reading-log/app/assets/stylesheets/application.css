@@ -229,6 +229,18 @@
   margin-bottom: 2rem;
 }
 
+/* モバイル用 詳細ページ */
+@media (max-width: 600px) {
+
+  .book-detail h1 {
+    font-size: 1.5rem;
+  }
+
+  .book-detail h2 {
+    font-size: 1.3rem;
+  }
+}
+
 .book-info {
   background-color: #f8f9fa;
   padding: 1.5rem;
@@ -240,6 +252,13 @@
 .book-info p {
   margin: 0.5rem 0;
   line-height: 1.6;
+}
+
+/* モバイル用 */
+@media (max-width: 600px) {
+  .book-info {
+    padding: 0.5rem;
+  }
 }
 
 .book-detail .comments-section {
@@ -292,6 +311,13 @@
   background-color: #f8f9fa;
   padding: 1.5rem;
   border-radius: 6px;
+}
+
+/* モバイル用 コメント追加フォーム */
+@media (max-width: 600px) {
+  .book-detail .new-comment-form {
+    padding: 0.5rem;
+  }
 }
 
 .book-detail h3 {
@@ -485,6 +511,13 @@
   font-size: 2rem;
   border-bottom: 2px solid #69A2B6;
   padding-bottom: 0.5rem;
+}
+
+/* モバイル用 */
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.3rem;
+  }
 }
 
 /* ヘッダースタイル */
@@ -745,10 +778,6 @@
 /* 以下モバイル用 */
 @media (max-width: 600px) {
 
-  .page-title {
-    font-size: 1.5rem;
-  }
-
   /* 開発者についてのセクションのレイアウトを縦並びにする */
   .profile-container {
     flex-direction: column;
@@ -756,7 +785,7 @@
   }
 
   .info-section h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .sns-buttons {
