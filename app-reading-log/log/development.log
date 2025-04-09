@@ -14882,3 +14882,59 @@ Processing by BookNotesController#index as HTML
 Completed 200 OK in 550ms (Views: 13.2ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.1ms)
 
 
+Started GET "/" for 172.17.0.1 at 2025-04-09 11:45:19 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 2020ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 11:45:24 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 196.7ms | GC: 11.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 396.5ms | GC: 27.0ms)
+Completed 200 OK in 1758ms (Views: 848.2ms | ActiveRecord: 49.8ms (0 queries, 0 cached) | GC: 42.6ms)
+
+
+Started GET "/assets/application-5543841e.css" for 172.17.0.1 at 2025-04-09 11:45:26 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/about" for 172.17.0.1 at 2025-04-09 11:45:29 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 44.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | GC: 0.0ms)
+Completed 200 OK in 630ms (Views: 52.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 11:45:35 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 0.5ms)
+Completed 200 OK in 643ms (Views: 12.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/users/sign_in" for 172.17.0.1 at 2025-04-09 11:45:42 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"user_name"=>"test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."user_name" = 'test' ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='AppReadingLog',controller='sessions'*/[0m
+Completed 401 Unauthorized in 1214ms (ActiveRecord: 11.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"user_name"=>"test", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 816ms (Views: 8.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

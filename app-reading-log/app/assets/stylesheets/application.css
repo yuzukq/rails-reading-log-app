@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
 /* 背景ノート風 */
 .bg_pattern {
   position: fixed;
@@ -6,7 +7,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white; 
+  background: white;
   background-size: 240% 240%;
   opacity: 0.4;
   z-index: -1;
@@ -15,7 +16,8 @@
 
 .Lines {
   background-size: 40px 40px;
-  background-image:  repeating-linear-gradient(0deg, #d7e3d7, #b7c2ba 2px, #f9f0e1 2px, #fef2e2); /* 緯線上部，緯線下部，隙間上部， 隙間下部 */
+  background-image: repeating-linear-gradient(0deg, #d7e3d7, #b7c2ba 2px, #f9f0e1 2px, #fef2e2);
+  /* 緯線上部，緯線下部，隙間上部， 隙間下部 */
 }
 
 /* 読書リストのスタイル */
@@ -24,7 +26,7 @@
   margin: 20px auto;
   padding: 20px;
   font-family: 'Noto Serif JP', sans-serif;
-  
+
 }
 
 .reading-list-container h1 {
@@ -62,19 +64,23 @@
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    /* 慣性スクロール */
   }
 
   /* 読了感想のセルを調整 */
   .content-cell {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1; /* 表示する行数 */
-    line-clamp: 1; /* 同上 */
+    -webkit-line-clamp: 1;
+    /* 表示する行数 */
+    line-clamp: 1;
+    /* 同上 */
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: break-word;
     white-space: normal;
-    max-width: 300px; 
+    max-width: 300px;
   }
 
 }
@@ -108,10 +114,11 @@
   border-radius: 4px;
   text-decoration: none;
   color: white;
+
   &:hover {
-      opacity: 0.8;
-    }
-  
+    opacity: 0.8;
+  }
+
 }
 
 .show-button {
@@ -150,15 +157,18 @@
 }
 
 .status-badge.reading {
-  background-color: #17a2b8;  /* 青系 */
+  background-color: #17a2b8;
+  /* 青系 */
 }
 
 .status-badge.completed {
-  background-color: #28a745;  /* 緑系 */
+  background-color: #28a745;
+  /* 緑系 */
 }
 
 .status-badge.suspended {
-  background-color: #dc3545;  /* 赤系 */
+  background-color: #dc3545;
+  /* 赤系 */
 }
 
 
@@ -177,7 +187,7 @@
   padding: 15px;
   background-color: white;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .page-number {
@@ -332,6 +342,7 @@
 .book-detail .edit-button {
   background-color: #02ff78;
   color: white;
+
   &:hover {
     background-color: #27ae60;
   }
@@ -345,6 +356,7 @@
 .book-detail .back-button {
   background-color: #95a5a6;
   color: white;
+
   &:hover {
     background-color: #7f8c8d;
   }
@@ -573,12 +585,21 @@
 }
 
 @keyframes correct {
-  50% { transform: translateX(-5px); }
+  50% {
+    transform: translateX(-5px);
+  }
 }
 
 @keyframes incorrect {
-  25%, 75% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
+
+  25%,
+  75% {
+    transform: translateX(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 
@@ -683,7 +704,7 @@
     background-color: #f0f0f0;
   }
 
-  &:hover img{
+  &:hover img {
     animation: sns-button-hover .5s ease-in-out;
   }
 
@@ -699,6 +720,7 @@
     translate: 0 1em;
     opacity: 0;
   }
+
   60% {
     translate: 0 -1em;
     opacity: 0;
@@ -724,7 +746,7 @@
 @media (max-width: 600px) {
 
   .page-title {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   /* 開発者についてのセクションのレイアウトを縦並びにする */
