@@ -1,13 +1,9 @@
-<%= stylesheet_link_tag "https://unpkg.com/scroll-hint@1.1.4/css/scroll-hint.css", media: "all" %>
-<%= javascript_include_tag "https://unpkg.com/scroll-hint@1.1.4/js/scroll-hint.min.js" %>
-
 <div class="bg_pattern Lines"></div>
 <div class="reading-list-container">
   <h1 class="page-title">読書メモ一覧</h1>
 
   <%= link_to "新規作成", new_book_note_path, class: "new-button" %>
 
-<div class="scroll-hint" data-scroll-hint>
   <table class="reading-list-table">
     <thead>
       <tr>
@@ -48,5 +44,4 @@
       <% end %>
     </tbody>
   </table>
-</div>
 </div>
