@@ -16417,3 +16417,20 @@ Started GET "/assets/application-f832e3d5.css" for 172.17.0.1 at 2025-04-10 16:4
 Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
 Started GET "/assets/application-432e17b2.js" for 172.17.0.1 at 2025-04-10 16:43:31 +0900
 Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/book_notes" for 172.17.0.1 at 2025-04-10 16:46:33 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/index.html.erb within layouts/application
+  [1m[36mBookNote Load (0.6ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:25
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  ↳ app/views/book_notes/index.html.erb:28
+  Rendered book_notes/index.html.erb within layouts/application (Duration: 29.1ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | GC: 0.1ms)
+Completed 200 OK in 727ms (Views: 35.2ms | ActiveRecord: 3.2ms (4 queries, 1 cached) | GC: 0.3ms)
+
+
