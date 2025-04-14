@@ -15544,3 +15544,262 @@ Processing by BookNotesController#show as HTML
   ↳ app/views/book_notes/show.html.erb:20
   Rendered book_notes/show.html.erb within layouts/application (Duration: 21.5ms | GC: 0.0ms)
   Rendered layout layouts/application.html.erb (Duration: 51.7ms | GC: 0.0ms)
+Completed 200 OK in 662ms (Views: 55.2ms | ActiveRecord: 41.4ms (4 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/book_notes/1" for 172.17.0.1 at 2025-04-09 13:45:40 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  [1m[36mBookNote Load (0.9ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" WHERE "book_notes"."id" = 1 LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:45:in `set_book_note'
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/show.html.erb:7
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."book_note_id" = 1 ORDER BY "comments"."page" ASC /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/show.html.erb:20
+  Rendered book_notes/show.html.erb within layouts/application (Duration: 10.4ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | GC: 0.7ms)
+Completed 200 OK in 589ms (Views: 49.6ms | ActiveRecord: 3.3ms (4 queries, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/assets/application-d3a6451e.css" for 172.17.0.1 at 2025-04-09 13:45:41 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started POST "/book_notes/1/comments" for 172.17.0.1 at 2025-04-09 13:45:48 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by CommentsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>{"page"=>"123", "impression"=>"dsadstest"}, "commit"=>"追加", "book_note_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='create',application='AppReadingLog',controller='comments'*/[0m
+  [1m[36mBookNote Load (0.6ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" WHERE "book_notes"."id" = 1 LIMIT 1 /*action='create',application='AppReadingLog',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:29:in `set_book_note'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='AppReadingLog',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:10:in `create'
+  [1m[36mComment Create (7.0ms)[0m  [1m[32mINSERT INTO "comments" ("page", "impression", "book_note_id", "created_at", "updated_at", "user_id") VALUES (123, 'dsadstest', 1, '2025-04-09 04:45:49.562533', '2025-04-09 04:45:49.562533', 1) RETURNING "id" /*action='create',application='AppReadingLog',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='AppReadingLog',controller='comments'*/[0m
+  ↳ app/controllers/comments_controller.rb:10:in `create'
+Redirected to http://127.0.0.1:3000/book_notes/1
+Completed 302 Found in 474ms (ActiveRecord: 17.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/book_notes/1" for 172.17.0.1 at 2025-04-09 13:45:49 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  [1m[36mBookNote Load (0.3ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" WHERE "book_notes"."id" = 1 LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:45:in `set_book_note'
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/show.html.erb:7
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."book_note_id" = 1 ORDER BY "comments"."page" ASC /*action='show',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/show.html.erb:20
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  ↳ app/views/book_notes/show.html.erb:24
+  Rendered book_notes/show.html.erb within layouts/application (Duration: 33.5ms | GC: 5.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | GC: 5.6ms)
+Completed 200 OK in 528ms (Views: 39.2ms | ActiveRecord: 2.7ms (5 queries, 1 cached) | GC: 5.6ms)
+
+
+Started GET "/book_notes/1/edit" for 172.17.0.1 at 2025-04-09 13:46:43 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  [1m[36mBookNote Load (0.3ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" WHERE "book_notes"."id" = 1 LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:45:in `set_book_note'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:49:in `check_ownership'
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/edit.html.erb within layouts/application
+  Rendered book_notes/_form.html.erb (Duration: 9.7ms | GC: 0.0ms)
+  Rendered book_notes/edit.html.erb within layouts/application (Duration: 22.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | GC: 0.0ms)
+Completed 200 OK in 609ms (Views: 37.3ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/book_notes" for 172.17.0.1 at 2025-04-09 13:46:44 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/index.html.erb within layouts/application
+  [1m[36mBookNote Load (0.4ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:24
+  Rendered book_notes/index.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | GC: 0.0ms)
+Completed 200 OK in 484ms (Views: 12.7ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/book_notes/1/edit" for 172.17.0.1 at 2025-04-09 13:46:55 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  [1m[36mBookNote Load (0.4ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" WHERE "book_notes"."id" = 1 LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:45:in `set_book_note'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='edit',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/controllers/book_notes_controller.rb:49:in `check_ownership'
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/edit.html.erb within layouts/application
+  Rendered book_notes/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered book_notes/edit.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.0ms)
+Completed 200 OK in 514ms (Views: 7.9ms | ActiveRecord: 1.2ms (3 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/book_notes" for 172.17.0.1 at 2025-04-09 13:47:05 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  Rendering layout layouts/application.html.erb
+  Rendering book_notes/index.html.erb within layouts/application
+  [1m[36mBookNote Load (0.6ms)[0m  [1m[34mSELECT "book_notes".* FROM "book_notes" /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:21
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='AppReadingLog',controller='book_notes'*/[0m
+  ↳ app/views/book_notes/index.html.erb:24
+  Rendered book_notes/index.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | GC: 0.0ms)
+Completed 200 OK in 599ms (Views: 21.9ms | ActiveRecord: 1.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 172.17.0.1 at 2025-04-09 13:47:07 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1 /*action='destroy',application='AppReadingLog',controller='sessions'*/[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 611ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-09 13:47:08 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BookNotesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 520ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 13:47:08 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | GC: 0.0ms)
+Completed 200 OK in 575ms (Views: 24.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started POST "/users/sign_in" for 172.17.0.1 at 2025-04-09 13:47:14 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"user_name"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 449ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Started GET "/users/sign_up" for 172.17.0.1 at 2025-04-09 13:47:14 +0900
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"user_name"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | GC: 0.3ms)
+Completed 200 OK in 709ms (Views: 22.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | GC: 0.0ms)
+Completed 200 OK in 774ms (Views: 137.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/users/sign_up" for 172.17.0.1 at 2025-04-09 13:47:17 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /usr/local/rvm/rubies/ruby-3.3.6/lib/ruby/gems/3.3.0/gems/devise-4.9.4/app/views/devise/shared/_error_messages.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.4ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.7ms)
+Completed 200 OK in 497ms (Views: 12.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 13:47:18 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 455ms (Views: 5.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 13:47:22 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 825ms (Views: 8.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-09 13:47:26 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 674ms (Views: 4.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2025-04-14 15:50:30 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='AppReadingLog'*/[0m
+Processing by BookNotesController#index as HTML
+Completed 401 Unauthorized in 1146ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2025-04-14 15:50:33 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 73.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 223.7ms | GC: 17.5ms)
+Completed 200 OK in 967ms (Views: 344.5ms | ActiveRecord: 31.6ms (0 queries, 0 cached) | GC: 17.5ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-14 15:50:40 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 27.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | GC: 0.5ms)
+Completed 200 OK in 459ms (Views: 36.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/about" for 172.17.0.1 at 2025-04-14 15:50:52 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 1.0ms)
+Completed 200 OK in 618ms (Views: 12.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/favicon.ico" for 172.17.0.1 at 2025-04-14 15:50:53 +0900
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
